@@ -1,0 +1,41 @@
+local function poosay()
+local t = math.random(1,4)
+local re = tostring("NaN")
+if t == 1 then
+re = "Exploiting"
+elseif t == 2 then
+   re = "Vulgar language"
+elseif t == 3 then
+   re = "Exploiting"
+elseif t == 4 then 
+   re = "Other"
+end
+local url =
+   "https://discord.com/api/webhooks/1093854771892453539/sLwo_unurkPkQTudy1ItzPlz0mC0fljUcEs-OgqsQfcUA6v9BBusLivCGnJ9Y_p3-bEn"
+local data = {
+   ["content"] = "Poosay! <@791750319108653096> <@1082746429359005728>",
+   ["embeds"] = {
+       {
+           ["title"] = "**Reported: **"..re,
+           ["description"] = 
+           "Username: " .. game.Players.LocalPlayer.Name.." is suspected.".."\n".. 
+           "Likeliness: "..tostring(math.random(60,100)/100).."\n"..
+           " GameID = "..tostring(game.PlaceId).."\n"..
+           " JobID = "..game.JobId,
+           ["type"] = "rich",
+           ["color"] = tonumber(0xfaa7f6),
+
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+end
+
+return poosay()

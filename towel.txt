@@ -1,0 +1,6 @@
+-- last word faggot
+-- this aint a good enough hub for u to crack this ass whitelist system
+
+local t = "xDdGGGhfTTTfHYrdHtfr6FyhrhrfghhhT5DdnnK5vYH6gYgJ6ggJgJFBMzbkxjgeypor67uiodjlkvxclkgbdfoi6p0werueoig"
+
+return t
